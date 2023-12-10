@@ -23,7 +23,7 @@ export const getRoomList = async (request, response) => {
 export const postCreateRoom = async (request, response) => {
     const { name, price, area, guest, bed, balcony, description } = request.body;
 
-    const room = await createRoom(name, price, area, guest, bed, balcony, description);
+    const room = await createRoom(name, image, price, area, guest, bed, balcony, description);
 
     response.json({
         data: room,
